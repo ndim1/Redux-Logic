@@ -17,7 +17,7 @@ const cartSlice = createSlice({
       const existingItem = state.items.find((item) => item.id === newItem.id);
       state.totalQuantity++;
       state.changed = true;
-      if (!existingItem) { //ovoj if e deka items e prazen i deka red 12 ne e tocen deka e prezen items mu turkame od newItem.paylod koj doagaat od stranata 
+      if (!existingItem) {
         state.items.push({
           id: newItem.id,
           price: newItem.price,
@@ -26,7 +26,7 @@ const cartSlice = createSlice({
           name: newItem.title
         });
       } else {
-        existingItem.quantity++;//ova e za plusot da se zgolemuva za edno
+        existingItem.quantity++;
         existingItem.totalPrice = existingItem.totalPrice + newItem.price;
       }
     },
@@ -38,7 +38,7 @@ const cartSlice = createSlice({
       if (existingItem.quantity === 1) {
         state.items = state.items.filter(item => item.id !== id);
       } else {
-        existingItem.quantity--;//ova e za minusot da se namaluva za edno
+        existingItem.quantity--;
         existingItem.totalPrice = existingItem.totalPrice - existingItem.price
       }
     },

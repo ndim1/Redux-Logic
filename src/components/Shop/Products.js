@@ -5,13 +5,13 @@ const NiKOLA_PRODUCTS = [
  {
   id:'b1',
   price:5,
-  title:'My First Page',
-  description:'My first code I ever wrote'
+  title:'My First Book',
+  description:'My first book I ever wrote'
 },
  {id:'b2',
   price:4,
-  title:'My Second Page',
-  description:'The second code I ever wrote'}
+  title:'My Second Book',
+  description:'The second book I ever wrote'}
 ]
 const Products = (props) => {
   return (

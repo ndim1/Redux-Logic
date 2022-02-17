@@ -21,7 +21,6 @@ const Cart = (props) => {
         }}
         />
         ))}
-        
       </ul>
     </Card>
   );
